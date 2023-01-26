@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <style>
+table, th, td {
+  border: 3px solid rgb(105, 63, 60);
+}
+th, td {
+  background-color: rgb(204, 236, 173);
+}
+</style>
+	<title>título</title>
+	<meta charset="utf-8" />
+</head>
+<body>
+	<script>
+
+/* 5. Realiza un script que pida número de filas y columnas y escriba una tabla.
+Dentro cada una de las celdas deberá escribirse un número consecutivo en orden descendente.
+Si, por ejemplo, la tabla es de 7×5 los números irán del 35 al 1.
+*/
+var i,j;
+
+var row = Number(prompt("Cantidad de filas??"));
+var column = Number(prompt("Cantidad de columnas??"));
+var result = row * column;
+
+document.write("<table border>");
+for (i = 0; i < row; i++) {
+   document.write("<tr background-color: #96D4D4>");
+    for (j = 0; j < column; j++) {
+        document.write("<td>");
+        document.write(result);
+        result--;
+        document.write("</td>");
+    }
+    //document.write("</tr>");
+}
+	</script>
+</body>
+</html>
+
