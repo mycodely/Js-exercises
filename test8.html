@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<title>título</title>
+	<meta charset="utf-8" />
+</head>
+<body>
+	<script>
+		/*
+Genera 3 números aleatorios entre 1 y 99 pero que no se repita ninguno
+
+function RandomInt(min, max) {
+  return Math.floor(Math.random() * (max - min + 1) ) + min;
+}
+
+*/
+var i = 0; num = 0, n1 = 0, n2 = 0, n3 = 0;
+
+do {
+    num = Math.floor((Math.random() * 99) + 1);
+    if ((num != n1) && (num != n2) && (num != n3)) {
+        document.write(num + "<br>");
+        i++;
+        if (i == 1) {
+            n1 = num;
+        }
+        if (i == 2) {
+            n2 = num;
+        }
+        if (i == 3) {
+            n3 = num;
+        }
+    }
+} while (i < 3);
+
+</script>
+
+</body>
+</html>
