@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<title>título</title>
+	<meta charset="utf-8" />
+</head>
+<body>
+	<script>
+		/*
+4. Realiza un script que imprima 14 resultados aleatorios de una quiniela 1 X 2. Ejemplo de resultado:
+
+Resultado 1: 1
+Resultado 2: X
+Resultado 3: 2
+
+*/
+var num= 0
+
+function randomPick(num){
+    if(num == 1 || (num == 2)){
+        return num;
+    }
+    else{
+        return 'x';
+    }
+}
+
+for (i =0; i < 14; i++){
+    num = Math.floor(Math.random() * 3) + 1
+    document.write("Resultado aleatorio quiniela "+ randomPick(num)+ "<br>");
+}
+
+</script>
+
+</body>
+</html>
