@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<title>título</title>
+	<meta charset="utf-8" />
+</head>
+<body>
+	<script>
+
+/*
+1. Realiza un script que pida por teclado 3 edades y 3 nombres e indique el nombre del mayor
+
+--------First approach---------
+-------------------------------
+let age, name;
+let people= [];
+
+
+function Attribs(){
+    age = Number(prompt("Ingrese edad"));
+    name = prompt("Ingrese nombre")
+}
+
+function Person(age, name) {
+  this.age = age;
+  this.name = name;
+}
+
+for (i = 0; i <= 3; i++) {
+    Attribs()
+    people = new Person(,)
+   document.write("El mayor de edad es "+);
+    }
+
+    */
+let person; people = [];
+
+    function CreatePerson(age, name) {
+        this.age = age;
+        this.name = name;
+} 
+
+for (i = 0; i< 3; i++){
+    person = new CreatePerson(Number(prompt("Ingrese edad")),(prompt("Ingrese nombre")));
+    people.push(person);
+    //Convierte a string y muestra las propiedades del objeto guardado en el array
+    document.write(JSON.stringify(people[i]));
+    document.write("<br>");
+}
+document.write("<hr>");
+
+var Older = Math.max(people[0].age, people[1].age, people[2].age);
+if (Older == people[0].age) {
+        document.write("El mayor es : "+ (JSON.stringify(people[0].name)))
+    }
+    if (Older == people[1].age) {
+        document.write("El mayor es : "+ (JSON.stringify(people[1].name)))
+    }
+    if (Older == people[2].age) {
+        document.write("El mayor es : "+ (JSON.stringify(people[2].name)))
+    }
+
+
+/*
+//var results = nicknames.filter(function (nickname) { return nickname.id == '200'; });
+// tengo el valor maximo que quiero buscar 
+// mi array es people []
+// adentro estan los objetos person
+// tengo que acceder a ... people->person.age para comparar con Older (valor de una propiedad de un objeto)
+
+----------Alternative solution-----
+------------------------------------
+var OlderName = people[person.age].filter(function (person) { person.age == Older; });
+
+
+document.write("test = "+ Older);
+document.write("<br>");
+document.write("var Older name tiene adentro =  "+ OlderName);
+document.write("<br>");
+function showName() {
+  var result = `La persona mayor se llama ${OlderName.age}`;
+  document.write(result);
+}
+
+showName();
+    
+    var test2 = people.find(Older)
+person.age(person.age.element => {
+    return element:includes(Older)
+})
+
+document.write("test = "+ Older);
+document.write("<br>");
+document.write("var Older name tiene adentro =  "+ OlderName);
+document.write("<br>");
+function showName() {
+  var result = `La persona mayor se llama ${OlderName.age}`;
+  document.write(result);
+}
+
+showName();
+    
+    */
+	</script>
+</body>
+</html>
