@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<title>título</title>
+	<meta charset="utf-8" />
+</head>
+<body>
+	<script>
+		
+/* 5. Realiza el script anterior pero con la probabilidad de que salga el 1 sea del 60%, la de la X del 30% y la del 2 del 10%
+
+    for (i = 1; i < 14; i++) {
+        num = Math.floor((Math.random() * 100) + 1);
+        if (num <= 60) {
+            document.write("Resultado " + i + ": 1<br>");
+        }
+        else if (num <= 90) {
+            document.write("Resultado " + i + ": X<br>");
+        }
+        else {
+            document.write("Resultado " + i + ": 2<br>");
+        }
+    }
+*/
+
+
+let cases = {
+    70 : 1,   // 10-70 : 60  => 60%
+    10 : 2,     // 0-10   : 10 => 10%
+    100 : 'x'   // 70-100 : 30 => 30%
+};
+
+function randomInt(){
+  let random = Math.floor(Math.random() * 100)+1;
+
+  for(let prob in cases){
+    if(prob >= random){
+      return cases[prob];
+    }
+  }
+}
+
+    for (i = 1; i <= 14; i++) {
+        document.write("<br>"+ `El resultado del sorteo numero ${i} es :` + randomInt() + "<br>");
+    }
+
+
+
+</script>
+
+</body>
+</html>
