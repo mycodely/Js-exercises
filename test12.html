@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<title>título</title>
+	<meta charset="utf-8" />
+</head>
+<body>
+	<script>
+		
+/* 
+2. Realiza un script que pida una cadena de texto y la muestre poniendo el signo – entre cada carácter sin 
+usar el método replace. Por ejemplo, si tecleo “hola qué tal”, deberá salir “h-o-l-a- -q-u-e- -t-a-l”.
+
+*/
+var string = prompt("Escriba un texto");
+var stringLength = string.length;
+    
+for (i = 0; i < stringLength; i++) {
+	let char = string.charAt(i);    
+	if (i == stringLength - 1) {
+		document.write(char);
+	}
+	else {
+		document.write(char + "-");
+	}
+    }
+
+
+</script>
+
+</body>
+</html>
