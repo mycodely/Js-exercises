@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<title>título</title>
+	<meta charset="utf-8" />
+</head>
+<body>
+	<script>
+		
+/* 
+3. Realiza un script que cuente el número de vocales que tiene un texto.
+
+
+var string = prompt("Escriba un texto");
+var stringLength = string.length, count;
+let vowels = ["a","e","i","o","u"];
+    
+    
+for (i = 0; i < stringLength; i++) {
+    let char = string.charAt(i);
+    if(vowels.find()){
+        count= count +1;
+    }
+}
+
+document.write("En su texto hay: ", count, " vocales." )
+
+*/
+const string = prompt('Escriba un texto');
+
+function countVowel(str) { 
+const count = str.match(/[aeiou]/gi).length;
+return count;
+}
+
+document.write("El texto : ", string, " <Br> Tiene cantidad de vocales : ", countVowel(string));
+
+
+</script>
+
+</body>
+</html>
