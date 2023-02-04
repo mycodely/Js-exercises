@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<title>título</title>
+	<meta charset="utf-8" />
+</head>
+<body>
+	<script>
+		
+/* 
+4.Pedimos una cadena de texto que sabemos que puede contener paréntesis.
+Realiza un script que extraiga la cadena que se encuentra entre los paréntesis.
+Ejemplo: Si escribimos el texto “Hola (que) tal” se mostrará “que”. Si no existe el signo “(“
+mostrará una cadena vacía y si existe el signo “(“pero no el signo “)” mostrará desde el primer paréntesis hasta el final.
+
+
+
+
+*/
+const string = prompt('Escriba un texto que contenga paréntesis ');
+
+const numchar = string.length;
+
+var char;
+var output = "";
+var copy = false;
+        
+for (let i = 0; i < numchar; i++) {
+	char = string.charAt(i); 
+	if (char == ")") {
+    copy = false;
+     }
+    if (copy) {
+    output = output + char;
+    }
+    if (char == "(") {
+    copy = true;
+    }
+    }
+	
+document.write(output);
+
+
+
+</script>
+
+</body>
+</html>
