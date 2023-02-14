@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<title>título</title>
+	<meta charset="utf-8" />
+</head>
+<body>
+	<script>
+		
+/* 
+6. Realiza un script que pida un texto e indique si es un palíndromo.
+Ejemplo de palíndromo: “Dabale arroz a la zorra el abad”.
+        
+*/
+var string = prompt('Escriba un texto para verificar si es palíndromo');
+
+var numchar = string.length;
+
+	string = string.toLowerCase();
+	var char;
+	var string_espac = "";
+	var string_reves = "";
+
+	for (let i = 0; i < numchar; i++) {
+		char = string.charAt(i);
+                //Si el caracter es un espacio
+		if (char != " ") {
+			string_espac += char;
+			string_reves = char + string_reves;
+		}
+	}
+	if (string_espac == string_reves) {
+		document.write("El texto es un palíndromo");
+	}
+	else {
+		document.write("El texto NO es un palíndromo");
+	}
+
+
+
+</script>
+
+</body>
+</html>
