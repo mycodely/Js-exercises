@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<title>título</title>
+	<meta charset="utf-8" />
+</head>
+<body>
+<script>
+
+
+  const vowels = ["a", "e", "i", "o", "u"];
+    var string = (prompt("Introduce un texto").toLowerCase());
+
+    var slot = 0;
+    var flag = false;
+
+    for (let i = 0; i < string.length; i++) {
+        for (let j = 0; j < vowels.length; j++) {
+            if (vowels[j] == string.charAt(i)) {
+                slot = i;
+                flag = true;
+                break;
+            }
+        }
+        if (flag) {
+            break;
+        }
+    }
+    document.write("La primera vocal está en la posición " + (slot + 1));
+
+</script>
+</body>
+</html>
