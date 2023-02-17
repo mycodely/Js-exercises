@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<title>título</title>
+	<meta charset="utf-8" />
+</head>
+<body>
+<script>
+
+// 3. Realiza un script que muestre la serie de fibonacci hasta un número entre 1 y 100 pedido por teclado
+let x = 0;
+let y = 1;
+let z;
+
+const num = Number(prompt("Cuantos números de fibonacci quiere visualizar? (número entre 1 y 100)"));
+
+if((num >= 1) && (num <= 100)) {
+    for (i = 0; i < (num); i++) {
+        z = x + y;
+        document.write(z + "<br>");
+        y = x;
+        x = z;
+        }
+    }
+    else {
+        alert("Introduzca un número válido");
+    }
+
+</script>
+</body>
+</html>
