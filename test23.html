@@ -1,0 +1,46 @@
+<html lang="es">
+<head>
+	<title>título</title>
+	<meta charset="utf-8" />
+</head>
+<body>
+<script>
+
+//4. Crea una función que reciba un texto y lo devuelva al revés
+
+/* function voltear(texto){
+      var caracter = "";
+      var salida = "";
+      for(var i=0; i < texto.length; i++){
+        caracter = texto.charAt(i);
+        salida = caracter + salida;
+      }
+      return salida;
+    }
+   
+    var texto = prompt("Introduce un texto");
+    var reves = voltear(texto);
+    document.write("Texto original: " + texto);
+    document.write("Texto al revés: " + reves); */
+
+let char = "";
+let output = "";
+let i;
+
+
+function reverseIt(string){
+for(i=0; i< string.length; i++){
+    char = string.charAt(i);
+    output = char + output;
+
+} return output; }
+
+let string = prompt("Introduce un texto");
+
+document.write("Texto original: ", string);
+document.write("<Br>Texto modificado: ", reverseIt(string));
+
+
+</script>
+</body>
+</html>
