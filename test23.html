@@ -1,0 +1,31 @@
+<html lang="es">
+<head>
+	<title>título</title>
+	<meta charset="utf-8" />
+</head>
+<body>
+<script>
+
+//4. Crea una función que reciba un texto y lo devuelva al revés
+
+let char = "";
+let output = "";
+let i;
+
+
+function reverseIt(string){
+for(i=0; i< string.length; i++){
+    char = string.charAt(i);
+    output = char + output;
+
+} return output; }
+
+let string = prompt("Introduce un texto");
+
+document.write("Texto original: ", string);
+document.write("<Br>Texto modificado: ", reverseIt(string));
+
+
+</script>
+</body>
+</html>
