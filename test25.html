@@ -1,0 +1,44 @@
+<html lang="es">
+<head>
+	<title>título</title>
+	<meta charset="utf-8" />
+</head>
+<body>
+<script>
+//6. Crea una función que genere 100 números aleatorios entre 1 y 1000 que no se repitan y luego muestralos por pantalla
+
+
+let numbers = [];
+    let temp = 0;
+    let match = true;
+    var j = 0;
+    let cont = 0;
+    
+  function random(min,max){
+    return Math.round((Math.random() * (max-min)) + min);
+    }
+
+    for(var i=0; i<100; i++){
+      do{
+        match = true;
+        temp = random(1,1000);
+        
+        for( j=0; j < numbers.length; j++){
+          if(temp == numbers[j]){
+            match = false; 
+          }
+        }
+      }while(match == false);
+      numbers[i] = temp;
+    }
+
+    numbers.sort(function(a,b){return a-b});
+ 
+    for(var i=0; i < numbers.length; i++){
+      document.write("Index " + cont + ": " + numbers[i] + "<br>");
+      cont++;
+    }
+
+</script>
+</body>
+</html>
