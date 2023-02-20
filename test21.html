@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<title>título</title>
+	<meta charset="utf-8" />
+</head>
+<body>
+<script>
+
+//2. Crea una función que reciba un parámetro, un dni, y devuelva la letra del mismo. Si el dni pasado tiene algún error devolverá “”.
+
+const letters = ["T","R","W","A","G","M","Y","F","P","D","X","B","N","J","Z","S","Q","V","H","L","C","K","E"];
+let output = "";
+
+let num = Number(prompt("Introduce el numero de DNI sin puntos"));
+output = getDNI(num);
+
+if(output != ""){
+    document.write("Su dni ", num, " le corresponde la letra : ", output);
+}
+
+else{
+    document.write(num , " <--- El Número de DNI no es válido");
+}
+
+function getDNI(num){
+    if((num > 9999999) && (num < 100000000)){
+        let index = num % 23
+        output = letters[index];
+}
+return output;
+}
+
+
+</script>
+</body>
+</html>
