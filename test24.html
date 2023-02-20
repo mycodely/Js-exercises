@@ -1,0 +1,21 @@
+<html lang="es">
+<head>
+	<title>título</title>
+	<meta charset="utf-8" />
+</head>
+<body>
+<script>
+
+//4. Crea una función que genere número entero aleatorio entre min y max, que serán pasados como parámetros. Por defecto min = 1 y max = 100
+let min = Number(prompt("Introduce el numero mínimo")) || 1;
+let max = Number(prompt("Introduce el numero máximo")) || 100;
+
+function RandomInt(min, max) {
+  return Math.floor(Math.random() * (max - min + 1) ) + min;
+}
+
+document.write("Numero aleatorio entre ",min, " y ", max, " es: ",  RandomInt(min,max));
+
+</script>
+</body>
+</html>
