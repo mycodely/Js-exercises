@@ -10,6 +10,8 @@ function galletaAvena(cantidad, extraSabor) {
 
   console.log(galletaAvena(200));
 
+// RDA (Recommended Dietary Allowance o Ingesta Dietética Recomendada)
+// Los datos RDA están basados en una dieta de 2.000 calorías diarias, y podrían variar en función de tu necesidad de calorías.
   class Avena {
     constructor() {
       this.gramos = 100;
